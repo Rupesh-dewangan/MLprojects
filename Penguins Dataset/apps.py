@@ -8,7 +8,7 @@ st.info('Predicting the penguine species using Machine Learning model')
 
 with st.expander('Data'):
     st.write("**Raw data**")
-    df = pd.read_csv('data.csv')
+    df = pd.read_csv('https://raw.githubusercontent.com/Rupesh-dewangan/MLprojects/refs/heads/master/Penguins%20Dataset/data.csv')
     df
 
     st.write('**X**')
