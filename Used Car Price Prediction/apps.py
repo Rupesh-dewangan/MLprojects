@@ -27,7 +27,7 @@ transmission_option = ['Manual', 'Automatic']
 
 st.divider()
 with col1:
-    Present_Price = st.number_input("Present_Price",min_value=100000, max_value=1000000,step=1)
+    Present_Price = st.number_input("Present_Price",min_value=100000, max_value=10000000,step=1)
     Fuel_Type = st.selectbox("Fuel_Type", fuel_option)
     Transmission = st.selectbox("Transmission",transmission_option)
     Age = st.number_input("Age",min_value=0, max_value=15,step=1)
