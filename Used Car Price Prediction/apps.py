@@ -39,7 +39,7 @@ if st.button("Predict!"):
 
     if Present_Price!=0 :
     
-        model_load = joblib.load("https://github.com/Rupesh-dewangan/MLprojects/blob/master/Used%20Car%20Price%20Prediction/prediction.joblib")
+        model_load = joblib.load("https://github.com/Rupesh-dewangan/MLprojects/blob/master/Used Car Price Prediction/prediction.joblib")
 
         #Make Prediction
 
