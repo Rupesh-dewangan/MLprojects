@@ -1,6 +1,8 @@
 import streamlit as st
 import joblib
 import urllib.request
+import requests
+import joblib
 
 
 st.title('🚗 Car Price Prediction')
@@ -39,11 +41,35 @@ model_input = [[Present_Price/100000, Kms_Driven, fuel_option.index(Fuel_Type), 
 if st.button("Predict!"):
 
     if Present_Price!=0 :
-    
-        url = joblib.load('https://github.com/Rupesh-dewangan/MLprojects/raw/refs/heads/master/Used Car Price Prediction/prediction.joblib')
+
+
+    # Raw URL to the GitHub file
+        url = "https://github.com/Rupesh-dewangan/MLprojects/raw/refs/heads/master/Used%20Car%20Price%20Prediction/prediction.joblib"
+
+        # Specify a local file path to save the model
+        local_path = "prediction.joblib"
+
+        # Download the file
+        response = requests.get(url)
+        if response.status_code == 200:
+            with open(local_path, "wb") as f:
+                f.write(response.content)
+            print("Model downloaded successfully.")
+        else:
+            raise Exception(f"Failed to download the file. HTTP Status Code: {response.status_code}")
+
+        # Load the model
+        try:
+            model_load = joblib.load(local_path)
+            print("Model loaded successfully.")
+        except Exception as e:
+            print(f"Error loading the model: {e}")
+
+
+        # url = joblib.load('https://github.com/Rupesh-dewangan/MLprojects/raw/refs/heads/master/Used Car Price Prediction/prediction.joblib')
 
         #url = "'https://github.com/user/project/raw/master/filteredDF.pkl'"
-        model_load = joblib.load(urllib.request.urlopen(url))
+        # model_load = joblib.load(urllib.request.urlopen(url))
         #Make Prediction
 
         prediction = model_load.predict(model_input)
