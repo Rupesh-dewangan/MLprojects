@@ -44,10 +44,10 @@ if st.button("Predict!"):
 
 
     # Raw URL to the GitHub file
-        url = "https://github.com/Rupesh-dewangan/MLprojects/raw/refs/heads/master/Used%20Car%20Price%20Prediction/prediction.joblib"
+        url = "prediction.joblib"
 
         # Specify a local file path to save the model
-        local_path = "prediction.joblib"
+        local_path = 'prediction.joblib'
 
         # Download the file
         response = requests.get(url)
