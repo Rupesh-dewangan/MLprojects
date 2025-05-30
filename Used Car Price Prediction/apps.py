@@ -62,6 +62,11 @@ if st.button("Predict!"):
         try:
             model_load = joblib.load(local_path)
             print("Model loaded successfully.")
+            prediction = model_load.predict(model_input)
+            prediction = f"{float(str(prediction*100000)[1:-1]):.2f}"
+            st.write('Expected Price is Rs.' , prediction)
+            st.balloons()
+
         except Exception as e:
             print(f"Error loading the model: {e}")
 
@@ -72,10 +77,6 @@ if st.button("Predict!"):
         # model_load = joblib.load(urllib.request.urlopen(url))
         #Make Prediction
 
-        prediction = model_load.predict(model_input)
-        prediction = f"{float(str(prediction*100000)[1:-1]):.2f}"
-        st.write('Expected Price is Rs.' , prediction)
-        st.balloons()
-
+        
     else:
         st.write('Please enter the correct values to predict car price')
