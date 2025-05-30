@@ -3,7 +3,6 @@ import joblib
 import urllib.request
 import requests
 import joblib
-import xgboost
 
 
 st.title('🚗 Car Price Prediction')
