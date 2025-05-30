@@ -57,7 +57,7 @@ if st.button("Predict!"):
         
         try:
             model_load = load_model_from_github(MODEL_URL)
-            st.sidebar.success("Model loaded successfully.")
+            #st.sidebar.success("Model loaded successfully.")
             prediction = model_load.predict(model_input)
             prediction = f"{float(str(prediction*100000)[1:-1]):.2f}"
             st.write('Expected Price is Rs.' , prediction)
