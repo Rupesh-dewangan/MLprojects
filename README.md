@@ -1,7 +1,5 @@
 # 📦 Rupesh Dewangan welcomes you 
-```
-⬆️ (Replace above with your app's name)
-```
+
 
 Here are my machine learnin projects of machine learning ...
 
@@ -9,7 +7,8 @@ Here are my machine learnin projects of machine learning ...
 
 Penguines Species Prediction [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://mlbyrupesh.streamlit.app/)
 
-Used Car Price Prediction [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://mlbyrupesh.streamlit.app/)
+Used Car Price Prediction [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://mlbyrupesh-carprice.streamlit.app/)
+
 
 ## GitHub Codespaces
 
