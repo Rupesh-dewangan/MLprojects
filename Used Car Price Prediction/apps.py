@@ -40,7 +40,7 @@ if st.button("Predict!"):
 
     if Present_Price!=0 :
     
-        url = joblib.load("https://github.com/Rupesh-dewangan/MLprojects/raw/refs/heads/master/Used Car Price Prediction/prediction.joblib")
+        url = joblib.load('https://github.com/Rupesh-dewangan/MLprojects/raw/refs/heads/master/Used Car Price Prediction/prediction.joblib')
 
         #url = "'https://github.com/user/project/raw/master/filteredDF.pkl'"
         model_load = joblib.load(urllib.request.urlopen(url))
