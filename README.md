@@ -1,15 +1,15 @@
-# 📦 Streamlit App Starter Kit 
+# 📦 Rupesh Dewangan welcomes you 
 ```
 ⬆️ (Replace above with your app's name)
 ```
 
-Description of the app ...
+Here are my machine learnin projects of machine learning ...
 
-## Demo App
+## My Projects
 
 Penguines Species Prediction [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://mlbyrupesh.streamlit.app/)
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://mlbyrupesh.streamlit.app/)
+Used Car Price Prediction [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://mlbyrupesh.streamlit.app/)
 
 ## GitHub Codespaces
 
