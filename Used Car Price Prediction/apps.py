@@ -44,38 +44,38 @@ if st.button("Predict!"):
 
     if Present_Price!=0 :
     
-    MODEL_URL = "https://github.com/Rupesh-dewangan/MLprojects/raw/refs/heads/master/Used%20Car%20Price%20Prediction/prediction.joblib"
-
-    @st.cache_resource
-    def load_model_from_github(url):
-        """Fetch and load the model directly from GitHub."""
-        response = requests.get(url)
-        if response.status_code == 200:
-            return joblib.load(BytesIO(response.content))
-        else:
-            raise Exception(f"Failed to fetch the model. HTTP Status Code: {response.status_code}")
+        MODEL_URL = "https://github.com/Rupesh-dewangan/MLprojects/raw/refs/heads/master/Used%20Car%20Price%20Prediction/prediction.joblib"
     
-    try:
-        model_load = load_model_from_github(MODEL_URL)
-        st.sidebar.success("Model loaded successfully.")
-        prediction = model_load.predict(model_input)
-        prediction = f"{float(str(prediction*100000)[1:-1]):.2f}"
-        st.write('Expected Price is Rs.' , prediction)
-        st.balloons()
-
-    except Exception as e:
-        st.sidebar.error(f"Error loading model: {e}")
-        st.stop()
-            
-     #model_load = joblib.load('prediction.joblib')
-     
-
-        # url = joblib.load('https://github.com/Rupesh-dewangan/MLprojects/raw/refs/heads/master/Used Car Price Prediction/prediction.joblib')
-
-        #url = "'https://github.com/user/project/raw/master/filteredDF.pkl'"
-        # model_load = joblib.load(urllib.request.urlopen(url))
-        #Make Prediction
-
+        @st.cache_resource
+        def load_model_from_github(url):
+            """Fetch and load the model directly from GitHub."""
+            response = requests.get(url)
+            if response.status_code == 200:
+                return joblib.load(BytesIO(response.content))
+            else:
+                raise Exception(f"Failed to fetch the model. HTTP Status Code: {response.status_code}")
         
+        try:
+            model_load = load_model_from_github(MODEL_URL)
+            st.sidebar.success("Model loaded successfully.")
+            prediction = model_load.predict(model_input)
+            prediction = f"{float(str(prediction*100000)[1:-1]):.2f}"
+            st.write('Expected Price is Rs.' , prediction)
+            st.balloons()
+    
+        except Exception as e:
+            st.sidebar.error(f"Error loading model: {e}")
+            st.stop()
+                
+         #model_load = joblib.load('prediction.joblib')
+         
+    
+            # url = joblib.load('https://github.com/Rupesh-dewangan/MLprojects/raw/refs/heads/master/Used Car Price Prediction/prediction.joblib')
+    
+            #url = "'https://github.com/user/project/raw/master/filteredDF.pkl'"
+            # model_load = joblib.load(urllib.request.urlopen(url))
+            #Make Prediction
+    
+            
     else:
         st.write('Please enter the correct values to predict car price')
