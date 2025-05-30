@@ -3,6 +3,7 @@ import joblib
 import urllib.request
 import requests
 import joblib
+from xgboost import XGBRegressor
 
 
 st.title('🚗 Car Price Prediction')
