@@ -42,33 +42,12 @@ if st.button("Predict!"):
 
     if Present_Price!=0 :
 
-
-    # Raw URL to the GitHub file
-        url = "prediction.joblib"
-
-        # Specify a local file path to save the model
-        local_path = 'prediction.joblib'
-
-        # Download the file
-        response = requests.get(url)
-        if response.status_code == 200:
-            with open(local_path, "wb") as f:
-                f.write(response.content)
-            print("Model downloaded successfully.")
-        else:
-            raise Exception(f"Failed to download the file. HTTP Status Code: {response.status_code}")
-
-        # Load the model
-        try:
-            model_load = joblib.load(local_path)
-            print("Model loaded successfully.")
-            prediction = model_load.predict(model_input)
-            prediction = f"{float(str(prediction*100000)[1:-1]):.2f}"
-            st.write('Expected Price is Rs.' , prediction)
-            st.balloons()
-
-        except Exception as e:
-            print(f"Error loading the model: {e}")
+     model_load = joblib.load(local_path)
+     print("Model loaded successfully.")
+     prediction = model_load.predict(model_input)
+     prediction = f"{float(str(prediction*100000)[1:-1]):.2f}"
+     st.write('Expected Price is Rs.' , prediction)
+     st.balloons()
 
 
         # url = joblib.load('https://github.com/Rupesh-dewangan/MLprojects/raw/refs/heads/master/Used Car Price Prediction/prediction.joblib')
