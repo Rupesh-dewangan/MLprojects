@@ -1,5 +1,6 @@
 import streamlit as st
 import joblib
+import urllib.request
 
 
 st.title('🚗 Car Price Prediction')
@@ -39,8 +40,10 @@ if st.button("Predict!"):
 
     if Present_Price!=0 :
     
-        model_load = joblib.load("https://github.com/Rupesh-dewangan/MLprojects/raw/refs/heads/master/Used%20Car%20Price%20Prediction/prediction.joblib")
+        url = joblib.load("https://github.com/Rupesh-dewangan/MLprojects/raw/refs/heads/master/Used%20Car%20Price%20Prediction/prediction.joblib")
 
+        #url = "'https://github.com/user/project/raw/master/filteredDF.pkl'"
+        model_load = joblib.load(urllib.request.urlopen(url))
         #Make Prediction
 
         prediction = model_load.predict(model_input)
