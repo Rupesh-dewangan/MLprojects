@@ -43,7 +43,6 @@ if st.button("Predict!"):
     if Present_Price!=0 :
 
      model_load = joblib.load('prediction.joblib')
-     print("Model loaded successfully.")
      prediction = model_load.predict(model_input)
      prediction = f"{float(str(prediction*100000)[1:-1]):.2f}"
      st.write('Expected Price is Rs.' , prediction)
