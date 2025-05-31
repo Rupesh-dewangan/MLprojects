@@ -1,7 +1,7 @@
-# 📦 Rupesh Dewangan welcomes you 
+# 📦 Rupesh Dewangan Welcomes You 
 
 
-Here are my machine learnin projects of machine learning ...
+Check out my Machine learning projects...
 
 ## My Projects
 
@@ -9,6 +9,9 @@ Penguines Species Prediction [![Streamlit App](https://static.streamlit.io/badge
 
 Used Car Price Prediction [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://mlbyrupesh-carprice.streamlit.app/)
 
+Telegram Bot [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://mlbyrupesh-telegrambot.streamlit.app/)
+
+mlprojects-telegrambot
 
 ## GitHub Codespaces
 
