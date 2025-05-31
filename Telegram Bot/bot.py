@@ -9,7 +9,7 @@ st.divider()
 st.info('LLM Generative AI using API of Deepseek integrated with Telegram chat')
 st.write("Check out the [Telegram Bot](https://t.me/imagepower_bot) for more details.")
 
-Initialize the LLM model
+#Initialize the LLM model
 llm = ChatGroq(
     temperature=0,
     groq_api_key="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",
