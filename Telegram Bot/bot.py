@@ -35,8 +35,8 @@ def echo(message):
     sanitized_response = re.sub(r'</?[^>]+>', '', response.content)  # Remove all HTML tags
     
     # Print the sanitized response (for debugging purposes)
-    print(message.text)
-    print(sanitized_response)
+    #print(message.text)
+    #print(sanitized_response)
     
     # Send the sanitized response back to the user as the bot's reply
     bot.send_message(message.chat.id, sanitized_response, parse_mode='html')
