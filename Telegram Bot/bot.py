@@ -4,6 +4,12 @@ import re
 import streamlit as st
 
 
+st.title('🤖 Telegram Bot')
+
+st.divider()
+st.info('LLM Generative AI using API of Deepseek integrated with Telegram chat')
+st.write("Check out the [Telegram Bot](https://t.me/imagepower_bot) for more details.")
+
 # Initialize the LLM model
 llm = ChatGroq(
     temperature=0,
@@ -44,10 +50,5 @@ def handle_all_messages(message):
 # Run the bot
 bot.infinity_polling()
 
-st.title('🤖 Telegram Bot')
-
-st.divider()
-st.info('LLM Generative AI using API of Deepseek integrated with Telegram chat')
-st.write("Check out the [Telegram Bot](https://t.me/imagepower_bot) for more details.")
 
 
