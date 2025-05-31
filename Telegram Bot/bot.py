@@ -1,9 +1,7 @@
-import streamlit as st
 import telebot
 from langchain_groq import ChatGroq
 import re
-
-
+import streamlit as st
 
 st.title('🤖 Telegram Bot')
 
@@ -50,6 +48,3 @@ def handle_all_messages(message):
 
 # Run the bot
 bot.infinity_polling()
-
-
-
