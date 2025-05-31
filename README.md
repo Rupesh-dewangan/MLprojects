@@ -11,7 +11,6 @@ Used Car Price Prediction [![Streamlit App](https://static.streamlit.io/badges/s
 
 Telegram Bot [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://mlbyrupesh-telegrambot.streamlit.app/)
 
-mlprojects-telegrambot
 
 ## GitHub Codespaces
 
